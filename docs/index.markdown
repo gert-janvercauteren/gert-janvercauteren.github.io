@@ -4,6 +4,3 @@
 
 layout: home
 ---
-
-# Gert-Jan Vercauteren
-## Lead Accessibility Engineer @ Skyscanner

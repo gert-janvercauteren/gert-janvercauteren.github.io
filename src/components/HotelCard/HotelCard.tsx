@@ -23,6 +23,8 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
     const a11yPrice = `${price} per night`
 
+    const cityCenterDistanceStr = `${cityCenterDistance} from city center}`
+
     const [hotelSaved, setHotelSaved] = useState(false)
     const a11ySave = `Save, ${title}`
     const a11yRemoveSaved = `Delete saved, ${title}`
@@ -43,7 +45,7 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
                     </BpkText>
                     <BpkStarRating ratingLabel={stars + ' Stars'} maxRating={stars} rating={stars}></BpkStarRating>
                 </div>
-                <BpkText>{cityCenterDistance} from city center</BpkText>
+                <BpkText>{cityCenterDistanceStr}</BpkText>
 
                 {/* Rating */}
                 <BpkText textStyle={TEXT_STYLES.footnote} tagName={'p'}>

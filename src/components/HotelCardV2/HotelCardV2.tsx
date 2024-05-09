@@ -3,7 +3,7 @@ import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
-import './HotelCard.scss'
+import './HotelCardV2.scss'
 import {useState} from "react";
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
     cityCenterDistance: string
 }
 
-function HotelCard({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
+function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
     const a11yTitle = `Option ${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
@@ -29,7 +29,7 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
     const a11yRemoveSaved = `Delete saved, ${title}`
 
     return (
-        <BpkCard atomic={false} padded={false} className={"HotelCard"}>
+        <BpkCard atomic={false} padded={false} className={"HotelCard"} role="group" aria-label={"Option "+option}>
             <div aria-hidden>
                 <div className={'Gallery'}>
 
@@ -55,8 +55,9 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
 
                 {/* Price */}
                 <div className={'PriceContainer'}>
-                    <BpkText textStyle={TEXT_STYLES.heading4} aria-hidden>
-                        {price} night
+                    <BpkText textStyle={TEXT_STYLES.heading4}>
+                        <span className={'visually-hidden'}>{a11yPrice}</span>
+                        <span aria-hidden>{price} night</span>
                     </BpkText>
                 </div>
 
@@ -85,4 +86,4 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
     )
 }
 
-export default HotelCard
+export default HotelCardV2

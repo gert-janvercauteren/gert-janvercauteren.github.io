@@ -23,7 +23,7 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
     const a11yPrice = `${price} per night`
 
-    const cityCenterDistanceStr = `${cityCenterDistance} from city center}`
+    const cityCenterDistanceStr = `${cityCenterDistance} from city center`
 
     const [hotelSaved, setHotelSaved] = useState(false)
     const a11ySave = `Save, ${title}`

@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {
-    createBrowserRouter,
-    RouterProvider,
+    createHashRouter, HashRouter, Route,
+    Routes,
 } from "react-router-dom";
 import Root from "./routes/Root";
 import ErrorPage from "./ErrorPage";
@@ -13,7 +12,7 @@ import CaseOne from "./routes/CaseOne";
 import CaseTwo from "./routes/CaseTwo";
 import CaseThree from "./routes/CaseThree";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Root />,
@@ -38,7 +37,14 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+      <HashRouter>
+          <Routes>
+              <Route path="/" element={<Root />} />
+              <Route path="/case/1" element={<CaseOne />} />
+              <Route path="/case/2" element={<CaseTwo />} />
+              <Route path="/case/3" element={<CaseThree />} />
+          </Routes>
+      </HashRouter>
   </React.StrictMode>
 );
 

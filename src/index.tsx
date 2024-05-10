@@ -3,13 +3,42 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import Root from "./routes/Root";
+import ErrorPage from "./ErrorPage";
+import CaseOne from "./routes/CaseOne";
+import CaseTwo from "./routes/CaseTwo";
+import CaseThree from "./routes/CaseThree";
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Root />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: "case/1",
+        element: <CaseOne />
+    },
+    {
+        path: "case/2",
+        element: <CaseTwo />
+    },
+    {
+        path: "case/3",
+        element: <CaseThree />
+    },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+      <RouterProvider router={router} />
   </React.StrictMode>
 );
 

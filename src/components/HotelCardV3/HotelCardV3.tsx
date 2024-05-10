@@ -3,7 +3,7 @@ import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
-import './HotelCardV2.scss'
+import './HotelCardV3.scss'
 import {useState} from "react";
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
     cityCenterDistance: string
 }
 
-function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
+function HotelCardV3({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
     const a11yTitle = `Option ${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
@@ -29,7 +29,7 @@ function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDi
     const a11yRemoveSaved = `Delete saved, ${title}`
 
     return (
-        <BpkCard atomic={false} padded={false} className={"HotelCard"}>
+        <BpkCard atomic={false} padded={false} className={"HotelCard"} role="group" aria-label={"Option "+option}>
             <div aria-hidden>
                 <div className={'Gallery'}>
 
@@ -86,4 +86,4 @@ function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDi
     )
 }
 
-export default HotelCardV2
+export default HotelCardV3

@@ -18,7 +18,6 @@ interface Props {
 
 function HotelCard({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
-    const a11yTitle = `Option ${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
     const a11yPrice = `${price} per night`
 
@@ -39,7 +38,7 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
                 {/* Base hotel name */}
                 <div className={'Headline'}>
                     <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
-                        <span className={'visually-hidden'}>{a11yTitle}</span>
+                        <span className={'visually-hidden'}>{title}</span>
                         <span aria-hidden>{title}</span>
                     </BpkText>
                     <BpkStarRating ratingLabel={stars + ' Stars'} maxRating={stars} rating={stars}></BpkStarRating>
@@ -55,8 +54,9 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
 
                 {/* Price */}
                 <div className={'PriceContainer'}>
-                    <BpkText textStyle={TEXT_STYLES.heading4} aria-hidden>
-                        {price} night
+                    <BpkText textStyle={TEXT_STYLES.heading4}>
+                        <span className={'visually-hidden'}>{a11yPrice}</span>
+                        <span aria-hidden>{price} night</span>
                     </BpkText>
                 </div>
 

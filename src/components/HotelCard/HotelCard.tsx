@@ -37,9 +37,8 @@ function HotelCard({title, price, stars, rating, reviews, option, cityCenterDist
             <div className={'CardContent'}>
                 {/* Base hotel name */}
                 <div className={'Headline'}>
-                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
-                        <span className={'visually-hidden'}>{title}</span>
-                        <span aria-hidden>{title}</span>
+                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h3'}>
+                        {title}
                     </BpkText>
                     <BpkStarRating ratingLabel={stars + ' Stars'} maxRating={stars} rating={stars}></BpkStarRating>
                 </div>

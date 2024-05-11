@@ -1,0 +1,73 @@
+@import '~@skyscanner/bpk-foundations-web/tokens/base.default.scss';
+
+.CarCard {
+  position: relative;
+  margin-bottom: .5rem;
+}
+
+.Content {
+  padding: bpk-spacing-base();
+}
+
+.TitleRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: bpk-spacing-base();
+}
+
+.ChipGroup {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.DetailRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CarImage {
+  width: 180px;
+  height: 70px;
+  background: gray;
+  border-radius: 0.5rem;
+}
+
+hr {
+  border-color: $bpk-line-day;
+}
+
+.PriceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.PriceInfo {
+  text-align: end;
+  width: 50%;
+}
+
+.CardLink {
+  border-radius: .75rem;
+}
+
+.CardLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: .75rem;
+  }
+}

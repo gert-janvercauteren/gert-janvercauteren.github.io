@@ -34,3 +34,7 @@ html, body, #root {
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+h2 {
+  margin-bottom: 0.5rem!important;
+}

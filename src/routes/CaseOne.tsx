@@ -1,12 +1,13 @@
 import BpkText, {TEXT_STYLES} from '@skyscanner/backpack-web/bpk-component-text';
 import React from "react";
 import HotelCard from "../components/HotelCard/HotelCard";
+import CarCard from "../components/CarCard/CarCard";
 
 function CaseOne() {
     return (
         <div className={'main-content'}>
-            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading2}>Hotels</BpkText>
-            <BpkText tagName={'p'} textStyle={TEXT_STYLES.footnote}>3 results</BpkText>
+            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading2}>Results</BpkText>
+            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading3}>Hotels</BpkText>
             <HotelCard option={1}
                        title={"Hampton by Hilton"}
                        price={"£159"}
@@ -30,8 +31,12 @@ function CaseOne() {
                        rating={4.5}
                        reviews={2}
                        cityCenterDistance={'9.87km'}></HotelCard>
+
+            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading3}>Car Hire</BpkText>
+            <CarCard option={1} title={"Chevrolet Bolt"} similarTitle={"Or similar intermediate SUV"} partner={"Hertz"} dealCount={5} price={"$56"}></CarCard>
+            <CarCard option={2} title={"Tesla model 3"} similarTitle={"Or similar intermediate SUV"} partner={"Dollar"} dealCount={19} price={"$80"}></CarCard>
+            <CarCard option={3} title={"Toyota Yaris"} similarTitle={"Or similar compact"} partner={"Thrifty"} dealCount={22} price={"$49"}></CarCard>
         </div>
     )
 }
-
 export default CaseOne

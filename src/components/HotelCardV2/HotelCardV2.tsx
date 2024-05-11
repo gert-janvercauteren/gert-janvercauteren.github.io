@@ -38,7 +38,7 @@ function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDi
             <div className={'CardContent'}>
                 {/* Base hotel name */}
                 <div className={'Headline'}>
-                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
+                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h3'}>
                         <span className={'visually-hidden'}>{a11yTitle}</span>
                         <span aria-hidden>{title}</span>
                     </BpkText>
@@ -55,9 +55,8 @@ function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Price */}
                 <div className={'PriceContainer'}>
-                    <BpkText textStyle={TEXT_STYLES.heading4}>
-                        <span className={'visually-hidden'}>{a11yPrice}</span>
-                        <span aria-hidden>{price} night</span>
+                    <BpkText textStyle={TEXT_STYLES.heading4} aria-hidden>
+                        {price} night
                     </BpkText>
                 </div>
 

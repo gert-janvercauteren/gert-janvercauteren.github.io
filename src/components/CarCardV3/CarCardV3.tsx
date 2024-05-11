@@ -19,7 +19,6 @@ function CarCardV3({option, title, similarTitle, partner, dealCount, price}: Pro
     const a11yTitle = `Option ${option}, ${title}, from ${price}`
 
     const partnerA11yText = `Supplied by, ${partner}`
-    const priceA11yText = `${dealCount} deals from ${price}`
 
     return (
         <BpkCard atomic={false} padded={false} className={'CarCard'} role={'group'} aria-label={"Option "+option}>

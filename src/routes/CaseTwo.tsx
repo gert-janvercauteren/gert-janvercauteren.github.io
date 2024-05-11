@@ -1,7 +1,6 @@
 import BpkText, {TEXT_STYLES} from '@skyscanner/backpack-web/bpk-component-text';
 import React from "react";
 import HotelCardV2 from "../components/HotelCardV2/HotelCardV2";
-import CarCard from "../components/CarCard/CarCard";
 import CarCardV2 from "../components/CarCardV2/CarCardV2";
 
 function CaseTwo() {

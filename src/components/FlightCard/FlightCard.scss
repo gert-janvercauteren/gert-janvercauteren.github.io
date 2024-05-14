@@ -1,0 +1,29 @@
+.FlightLeg {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+
+.TitleRow {
+  padding: 1rem;
+}
+
+.FlightPriceRow {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: end;
+}
+
+.FlightSaveButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.FlightCard {
+  position: relative;
+  margin-bottom: 1rem;
+}

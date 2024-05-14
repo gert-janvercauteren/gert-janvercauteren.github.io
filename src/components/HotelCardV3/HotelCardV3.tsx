@@ -38,7 +38,7 @@ function HotelCardV3({title, price, stars, rating, reviews, option, cityCenterDi
             <div className={'CardContent'}>
                 {/* Base hotel name */}
                 <div className={'Headline'}>
-                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h3'}>
+                    <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
                         <span className={'visually-hidden'}>{a11yTitle}</span>
                         <span aria-hidden>{title}</span>
                     </BpkText>

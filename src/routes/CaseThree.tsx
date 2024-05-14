@@ -6,8 +6,7 @@ import CarCardV3 from "../components/CarCardV3/CarCardV3";
 function CaseThree() {
     return (
         <div className={'main-content'}>
-            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading2}>Results</BpkText>
-            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading2}>Hotels</BpkText>
+            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading2}>Hotels</BpkText>
             <HotelCardV3 option={1}
                        title={"Hampton by Hilton"}
                        price={"£159"}
@@ -31,11 +30,6 @@ function CaseThree() {
                        rating={4.5}
                        reviews={2}
                        cityCenterDistance={'9.87km'}></HotelCardV3>
-
-            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading3}>Car Hire</BpkText>
-            <CarCardV3 option={1} title={"Chevrolet Bolt"} similarTitle={"Or similar intermediate SUV"} partner={"Hertz"} dealCount={5} price={"$56"}></CarCardV3>
-            <CarCardV3 option={2} title={"Tesla model 3"} similarTitle={"Or similar intermediate SUV"} partner={"Dollar"} dealCount={19} price={"$80"}></CarCardV3>
-            <CarCardV3 option={3} title={"Toyota Yaris"} similarTitle={"Or similar compact"} partner={"Thrifty"} dealCount={22} price={"$49"}></CarCardV3>
         </div>
     )
 }

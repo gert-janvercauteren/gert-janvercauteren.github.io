@@ -6,8 +6,7 @@ import CarCardV2 from "../components/CarCardV2/CarCardV2";
 function CaseTwo() {
     return (
         <div className={'main-content'}>
-            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading2}>Results</BpkText>
-            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading3}>Hotels</BpkText>
+            <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading3}>Hotels</BpkText>
             <HotelCardV2 option={1}
                        title={"Hampton by Hilton"}
                        price={"£159"}
@@ -31,11 +30,6 @@ function CaseTwo() {
                        rating={4.5}
                        reviews={2}
                        cityCenterDistance={'9.87km'}></HotelCardV2>
-
-            <BpkText tagName={'h2'} textStyle={TEXT_STYLES.heading3}>Car Hire</BpkText>
-            <CarCardV2 option={1} title={"Chevrolet Bolt"} similarTitle={"Or similar intermediate SUV"} partner={"Hertz"} dealCount={5} price={"$56"}></CarCardV2>
-            <CarCardV2 option={2} title={"Tesla model 3"} similarTitle={"Or similar intermediate SUV"} partner={"Dollar"} dealCount={19} price={"$80"}></CarCardV2>
-            <CarCardV2 option={3} title={"Toyota Yaris"} similarTitle={"Or similar compact"} partner={"Thrifty"} dealCount={22} price={"$49"}></CarCardV2>
         </div>
     )
 }

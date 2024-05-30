@@ -11,6 +11,7 @@ import ErrorPage from "./ErrorPage";
 import CaseOne from "./routes/CaseOne";
 import CaseTwo from "./routes/CaseTwo";
 import CaseThree from "./routes/CaseThree";
+import CaseFour from "./routes/CaseFour";
 
 const router = createHashRouter([
     {
@@ -30,6 +31,10 @@ const router = createHashRouter([
         path: "case/3",
         element: <CaseThree />
     },
+    {
+        path: "case/4",
+        element: <CaseFour />
+    },
 ]);
 
 const root = ReactDOM.createRoot(
@@ -43,6 +48,7 @@ root.render(
               <Route path="/case/1" element={<CaseOne />} />
               <Route path="/case/2" element={<CaseTwo />} />
               <Route path="/case/3" element={<CaseThree />} />
+              <Route path="/case/4" element={<CaseFour />} />
           </Routes>
       </HashRouter>
   </React.StrictMode>

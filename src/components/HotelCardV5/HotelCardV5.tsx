@@ -3,7 +3,7 @@ import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
-import './HotelCardV4.scss'
+import './HotelCardV5.scss'
 import {useState} from "react";
 
 interface Props {
@@ -16,7 +16,7 @@ interface Props {
     cityCenterDistance: string
 }
 
-function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
+function HotelCardV5({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
     const a11yTitle = `${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
@@ -29,7 +29,7 @@ function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDi
     const a11yRemoveSaved = `Delete saved, ${title}`
 
     return (
-        <BpkCard atomic={false} padded={false} className={"HotelCard"}>
+        <BpkCard href={`https://example.com/${title}`} padded={false} className={"HotelCard"}>
             <div aria-hidden>
                 <div className={'Gallery'}>
 
@@ -62,30 +62,9 @@ function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDi
                         {price} night
                     </BpkText>
                 </div>
-
-                {/* Positioned absolute in the top right corner */}
-                <div className={"SaveButton"}>
-                    <BpkSaveButton
-                        checked={hotelSaved}
-                        accessibilityLabel={hotelSaved ? a11yRemoveSaved : a11ySave}
-                        onCheckedChange={() => {
-                            console.log('save status changed!');
-                            setHotelSaved(!hotelSaved)
-                        }}
-                        size={SIZE_TYPES.default}
-                        style={STYLE_TYPES.contained}
-                    />
-                </div>
-
-                 {/*Link to view details is placed at the end and css is used to make the whole card clickable */}
-                <div className={'CardLink'}>
-                    <a href={`https://example.com/${title}`} className={'CardRound'}>
-                        <span className={'visually-hidden'}>{title}</span>
-                    </a>
-                </div>
             </div>
         </BpkCard>
     )
 }
 
-export default HotelCardV4
+export default HotelCardV5

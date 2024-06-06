@@ -1,10 +1,10 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
 import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
-import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
 import './HotelCardV4.scss'
 import {useState} from "react";
+import BpkSaveButtonV2, {SIZE_TYPES, STYLE_TYPES} from "../BPKSaveButtonV2/BPKSaveButtonV2";
 
 interface Props {
     option: number
@@ -20,13 +20,11 @@ function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDi
 
     const a11yTitle = `${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
-    const a11yPrice = `${price} per night`
 
     const cityCenterDistanceStr = `${cityCenterDistance} from city center`
 
     const [hotelSaved, setHotelSaved] = useState(false)
-    const a11ySave = `Save, ${title}`
-    const a11yRemoveSaved = `Delete saved, ${title}`
+    const a11ySave = `Save ${title}`
 
     return (
         <BpkCard atomic={false} padded={false} className={"HotelCard"}>
@@ -66,9 +64,9 @@ function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Positioned absolute in the top right corner */}
                 <div className={"SaveButton"}>
-                    <BpkSaveButton
+                    <BpkSaveButtonV2
                         checked={hotelSaved}
-                        accessibilityLabel={hotelSaved ? a11yRemoveSaved : a11ySave}
+                        accessibilityLabel={a11ySave}
                         onCheckedChange={() => {
                             console.log('save status changed!');
                             setHotelSaved(!hotelSaved)

@@ -51,9 +51,10 @@ function HotelCardV4({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Rating */}
                 <BpkText textStyle={TEXT_STYLES.footnote} tagName={'p'}>
-                    <span
-                        className={'visually-hidden'}>{a11yRating}</span>
-                    <span aria-hidden>{rating}, TripAdvisor {reviews}</span>
+                    <a href={`https://example.com/rating-${title}`} className={'rating'}>
+                        <span className={'visually-hidden'}>{a11yRating}</span>
+                        <span aria-hidden>{rating}, TripAdvisor {reviews}</span>
+                    </a>
                 </BpkText>
 
                 {/* Price */}

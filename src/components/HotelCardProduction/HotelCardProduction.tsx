@@ -3,7 +3,7 @@ import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
-import './HotelCardV5.scss'
+import './HotelCardProduction.scss'
 import {useState} from "react";
 
 interface Props {
@@ -16,9 +16,9 @@ interface Props {
     cityCenterDistance: string
 }
 
-function HotelCardV5({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
+function HotelCardProduction({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
-    const a11yTitle = `Option ${option}, ${title}, ${price} per night`
+    const a11yTitle = `${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
     const a11yPrice = `${price} per night`
 
@@ -29,19 +29,13 @@ function HotelCardV5({title, price, stars, rating, reviews, option, cityCenterDi
     const a11yRemoveSaved = `Delete saved, ${title}`
 
     return (
-        <BpkCard atomic={false} padded={false} className={"HotelCard"}>
+        <BpkCard href={`https://example.com/${title}`} padded={false} className={"HotelCard"}>
             <div aria-hidden>
                 <div className={'Gallery'}>
 
                 </div>
             </div>
             <div className={'CardContent'}>
-                {/*Link to view details is placed at the start and css is used to make the whole card clickable */}
-                <div className={'CardLink'}>
-                    <a href={`https://example.com/${title}`} className={'CardRound'}>
-                        <span className={'visually-hidden'}>{title}</span>
-                    </a>
-                </div>
                 {/* Base hotel name */}
                 <div className={'Headline'}>
                     <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
@@ -57,10 +51,9 @@ function HotelCardV5({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Rating */}
                 <BpkText textStyle={TEXT_STYLES.footnote} tagName={'p'}>
-                    <a href={`https://example.com/rating-${title}`} className={'rating'}>
-                        <span className={'visually-hidden'}>{a11yRating}</span>
-                        <span aria-hidden>{rating}, TripAdvisor {reviews}</span>
-                    </a>
+                    <span
+                        className={'visually-hidden'}>{a11yRating}</span>
+                    <span aria-hidden>{rating}, TripAdvisor {reviews}</span>
                 </BpkText>
 
                 {/* Price */}
@@ -69,23 +62,9 @@ function HotelCardV5({title, price, stars, rating, reviews, option, cityCenterDi
                         {price} night
                     </BpkText>
                 </div>
-
-                {/* Positioned absolute in the top right corner */}
-                <div className={"SaveButton"}>
-                    <BpkSaveButton
-                        checked={hotelSaved}
-                        accessibilityLabel={hotelSaved ? a11yRemoveSaved : a11ySave}
-                        onCheckedChange={() => {
-                            console.log('save status changed!');
-                            setHotelSaved(!hotelSaved)
-                        }}
-                        size={SIZE_TYPES.default}
-                        style={STYLE_TYPES.contained}
-                    />
-                </div>
             </div>
         </BpkCard>
     )
 }
 
-export default HotelCardV5
+export default HotelCardProduction

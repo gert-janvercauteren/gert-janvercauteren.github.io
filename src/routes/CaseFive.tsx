@@ -2,7 +2,7 @@ import React from "react";
 import List from "../components/List/List";
 import HotelCardV5 from "../components/HotelCardV5/HotelCardV5";
 
-function CaseFive() {
+function CaseFour() {
     const cards = <>
         <HotelCardV5 option={1}
                    title={"Hampton by Hilton"}
@@ -32,4 +32,4 @@ function CaseFive() {
         <List children={cards}></List>
     )
 }
-export default CaseFive
+export default CaseFour

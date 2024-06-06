@@ -12,6 +12,7 @@ import CaseOne from "./routes/CaseOne";
 import CaseTwo from "./routes/CaseTwo";
 import CaseThree from "./routes/CaseThree";
 import CaseFour from "./routes/CaseFour";
+import CaseProd from "./routes/CaseProd";
 import CaseFive from "./routes/CaseFive";
 
 const router = createHashRouter([
@@ -19,6 +20,10 @@ const router = createHashRouter([
         path: "/",
         element: <Root />,
         errorElement: <ErrorPage />
+    },
+    {
+        path: "case/prod",
+        element: <CaseProd />
     },
     {
         path: "case/1",
@@ -50,6 +55,7 @@ root.render(
       <HashRouter>
           <Routes>
               <Route path="/" element={<Root />} />
+              <Route path="/case/prod" element={<CaseProd />} />
               <Route path="/case/1" element={<CaseOne />} />
               <Route path="/case/2" element={<CaseTwo />} />
               <Route path="/case/3" element={<CaseThree />} />

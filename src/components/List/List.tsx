@@ -9,7 +9,7 @@ function List({children}: Props) {
     return (
         <div className={'main-content'}>
             <BpkText tagName={'h1'} textStyle={TEXT_STYLES.heading3}>Hotels in Barcelona</BpkText>
-            <BpkText tagName={'p'} textStyle={TEXT_STYLES.footnote}>3 results</BpkText>
+            <BpkText tagName={'p'} textStyle={TEXT_STYLES.footnote}>3 search results</BpkText>
             {children}
         </div>
     )

@@ -12,6 +12,7 @@ function Root() {
                     <li><a href={`/#/case/3`}>Test case 3</a></li>
                     <li><a href={`/#/case/4`}>Test case 4</a></li>
                     <li><a href={`/#/case/5`}>Test case 5</a></li>
+                    <li><a href={`/#/case/6`}>Test case 6</a></li>
                 </ul>
             </nav>
         </div>

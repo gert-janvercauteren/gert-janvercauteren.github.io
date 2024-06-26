@@ -6,6 +6,8 @@ import React from "react";
 import './HotelCardV6.scss'
 import {useState} from "react";
 import BpkSaveButtonV2 from "../BPKSaveButtonV2/BPKSaveButtonV2";
+import BpkRating from "@skyscanner/backpack-web/bpk-component-rating"
+import ratingLogo from "../../assets/rating.svg"
 
 interface Props {
     option: number
@@ -19,13 +21,11 @@ interface Props {
 
 function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDistance}: Props) {
 
-    const a11yTitle = `${title}, ${price} per night, option ${option}`
-    const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
-
     const cityCenterDistanceStr = `${cityCenterDistance} from city center`
-
     const [hotelSaved, setHotelSaved] = useState(false)
-    const a11ySave = `Save ${title}`
+
+    const a11yTitle = `${title}, ${price} per night, option ${option}`
+    const a11yRating = `Rated ${rating} of 5 on Skyscanner. Based on ${reviews} reviews.`
 
     return (
         <BpkCard atomic={false} padded={false} className={"HotelCard"}>
@@ -53,8 +53,15 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Rating */}
                 <BpkText textStyle={TEXT_STYLES.footnote} tagName={'p'}>
-                    <span className={'visually-hidden'}>{a11yRating}</span>
-                    <span aria-hidden>{rating}, TripAdvisor {reviews}</span>
+                    <BpkRating
+                        ariaLabel={a11yRating}
+                        title={
+                            <img src={ratingLogo} alt=""/>
+                        }
+                        subtitle={`${reviews} reviews`}
+                        value={rating}
+                        showScale={false}
+                    />
                 </BpkText>
 
                 {/* Price */}
@@ -68,7 +75,7 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
                 <div className={"SaveButton"}>
                     <BpkSaveButtonV2
                         checked={hotelSaved}
-                        accessibilityLabel={a11ySave}
+                        accessibilityLabel={`Save ${title}`}
                         onCheckedChange={() => {
                             console.log('save status changed!');
                             setHotelSaved(!hotelSaved)

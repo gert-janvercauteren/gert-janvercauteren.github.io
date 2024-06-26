@@ -31,7 +31,7 @@ function DesktopHotelCardV1({title, price, stars, rating, reviews, option, cityC
     const primaryContent = (
         <div className={'MainCardContent'}>
             <div aria-hidden>
-                <div className={'Gallery'}>
+                <div className={'DesktopGallery'}>
 
                 </div>
             </div>
@@ -40,7 +40,7 @@ function DesktopHotelCardV1({title, price, stars, rating, reviews, option, cityC
                     {/* Base hotel name */}
                     <div className={'Headline'}>
                         <BpkText textStyle={TEXT_STYLES.heading3} tagName={'h2'}>
-                            <a href={`https://example.com/${title}`} className={'CardRound CardLink'}>
+                            <a href={`https://example.com/${title}`} className={'CardRound DesktopCardLink'}>
                                 <span className={'visually-hidden'}>{a11yTitle}</span>
                             </a>
                             <span aria-hidden id={`title-${option}`}>{title}</span>

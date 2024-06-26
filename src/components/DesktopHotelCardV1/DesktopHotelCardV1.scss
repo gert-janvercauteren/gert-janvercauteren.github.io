@@ -4,31 +4,36 @@ button {
   all: unset;
 }
 
+.MainCardContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+}
+
 .HotelCard {
   position: relative;
   margin-bottom: .5rem;
 }
 
 .Gallery {
-  height: 120px;
-  width: 100%;
+  height: 100%;
+  width: 200px;
   background: gray;
-  border-radius: .75rem .75rem 0 0;
+  border-radius: .75rem 0 0 .75rem;
   position: relative;
 }
 
 .CardContent {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Headline {
   display: flex;
   justify-content: space-between;
-}
-
-.PriceContainer {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .CardLink {
@@ -37,7 +42,7 @@ button {
   left: 0;
   bottom: 0;
   right: 0;
-  border-radius: .75rem;
+  border-radius: .75rem 0 0 .75rem;
 
   a::after {
     content: '';
@@ -46,7 +51,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    border-radius: .75rem;
+    border-radius: .75rem 0 0 .75rem;
   }
 }
 
@@ -57,8 +62,70 @@ button {
 
 .SaveButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.25rem;
+  right: 0.25rem;
   z-index: 10;
   border-radius: 50%;
+}
+
+.HotelLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  // This is needed to rise above the full card link
+  position: relative;
+  z-index: 10;
+
+  li {
+    padding: 0.25rem;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.SecondaryContent {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ButtonLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 0 .75rem .75rem 0;
+
+  button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0 .75rem .75rem 0;
+  }
+}
+
+.DealLayout {
+  padding: 1rem;
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.GotoSite {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

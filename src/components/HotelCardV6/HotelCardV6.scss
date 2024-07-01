@@ -1,4 +1,4 @@
-@import '~@skyscanner/bpk-foundations-web/tokens/base.default.scss';
+@import '~@skyscanner/backpack-web/bpk-mixins/index.scss';
 
 button {
   all: unset;
@@ -7,18 +7,31 @@ button {
 .HotelCard {
   position: relative;
   margin-bottom: .5rem;
-}
 
-.Gallery {
-  height: 120px;
-  width: 100%;
-  background: gray;
-  border-radius: .75rem .75rem 0 0;
-  position: relative;
-}
+  &__Gallery {
+    height: 120px;
+    width: 100%;
+    background: gray;
+    border-radius: $bpk-border-radius-md $bpk-border-radius-md 0 0;
+    position: relative;
+  }
 
-.CardContent {
-  padding: 1rem;
+  &__CardContent {
+    padding: bpk-spacing-base();
+  }
+
+  &__SaveButton {
+    position: absolute;
+    top: bpk-spacing-base();
+    right: bpk-spacing-base();
+    z-index: 10;
+    border-radius: 50%;
+  }
+
+  &__CardLink:focus-within, &__SaveButton:focus-within {
+    outline: .125rem solid #0062e3;
+    outline-offset: .125rem;
+  }
 }
 
 .Headline {
@@ -50,15 +63,3 @@ button {
   }
 }
 
-.CardLink:focus-within, .SaveButton:focus-within {
-  outline: .125rem solid #0062e3;
-  outline-offset: .125rem;
-}
-
-.SaveButton {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
-  border-radius: 50%;
-}

@@ -7,3 +7,4 @@ declare module '@skyscanner/backpack-web/bpk-theming';
 declare module '@skyscanner/backpack-web/bpk-animate-height';
 declare module '@skyscanner/backpack-web/bpk-component-*';
 declare module '@skyscanner/bpk-foundations-web/tokens/base.es6';
+declare module '*.scss';

@@ -1,7 +1,7 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
 import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
-import BpkCard, {BpkDividedCard} from "@skyscanner/backpack-web/bpk-component-card";
+import {BpkDividedCard} from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
 import './DesktopHotelCardV1.scss'
 import {useState} from "react";

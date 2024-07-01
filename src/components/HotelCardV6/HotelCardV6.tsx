@@ -3,11 +3,14 @@ import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
-import './HotelCardV6.scss'
 import {useState} from "react";
 import BpkSaveButtonV2 from "../BPKSaveButtonV2/BPKSaveButtonV2";
 import BpkRating from "@skyscanner/backpack-web/bpk-component-rating"
 import ratingLogo from "../../assets/rating.svg"
+
+import STYLES from "./HotelCardV6.scss";
+import { cssModules } from '@skyscanner/backpack-web/bpk-react-utils';
+const getClassName = cssModules(STYLES);
 
 interface Props {
     option: number
@@ -28,13 +31,13 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
     const a11yRating = `Rated ${rating} of 5 on Skyscanner. Based on ${reviews} reviews.`
 
     return (
-        <BpkCard atomic={false} padded={false} className={"HotelCard"}>
+        <BpkCard atomic={false} padded={false} className={getClassName('HotelCard')}>
             <div aria-hidden>
-                <div className={'Gallery'}>
+                <div className={getClassName('HotelCard__Gallery')}>
 
                 </div>
             </div>
-            <div className={'CardContent'}>
+            <div className={getClassName('HotelCard__CardContent')}>
                 {/* Base hotel name */}
                 <div className={'Headline'}>
                     <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
@@ -72,7 +75,7 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
                 </div>
 
                 {/* Positioned absolute in the top right corner */}
-                <div className={"SaveButton"}>
+                <div className={getClassName('HotelCard__SaveButton')}>
                     <BpkSaveButtonV2
                         checked={hotelSaved}
                         accessibilityLabel={`Save ${title}`}

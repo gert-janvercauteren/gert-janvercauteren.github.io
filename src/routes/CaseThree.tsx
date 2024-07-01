@@ -30,7 +30,7 @@ function CaseThree() {
                      cityCenterDistance={'9.87km'}></HotelCardV3>
     </>
     return (
-       <List children={cards}></List>
+       <List title={"Hotels in Barcelona"} count={3} children={cards}></List>
     )
 }
 

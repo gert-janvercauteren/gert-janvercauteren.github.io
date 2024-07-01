@@ -29,7 +29,7 @@ function CaseProd() {
                              cityCenterDistance={'9.87km'}></HotelCardProduction>
     </>
     return (
-        <List children={cards}></List>
+        <List title={"Hotels in Barcelona"} count={3} children={cards}></List>
     )
 }
 export default CaseProd

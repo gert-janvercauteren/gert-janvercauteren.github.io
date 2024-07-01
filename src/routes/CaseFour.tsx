@@ -30,7 +30,7 @@ function CaseFour() {
                    cityCenterDistance={'9.87km'}></HotelCardV4>
     </>
     return (
-        <List children={cards}></List>
+        <List title={"Hotels in Barcelona"} count={3} children={cards}></List>
     )
 }
 export default CaseFour

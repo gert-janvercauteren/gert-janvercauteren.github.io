@@ -32,7 +32,7 @@ function CaseOne() {
                    cityCenterDistance={'9.87km'}></HotelCard>
     </>
     return (
-        <List children={cards}></List>
+        <List title={"Hotels in Barcelona"} count={3} children={cards}></List>
     )
 }
 export default CaseOne

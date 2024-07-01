@@ -15,6 +15,7 @@ import CaseProd from "./routes/CaseProd";
 import CaseFive from "./routes/CaseFive";
 import CaseSix from "./routes/CaseSix";
 import CaseDesktop from "./routes/CaseDesktop";
+import CaseCarHire from "./routes/CaseCarHire";
 
 const App: React.FC = ()  => {
     return (
@@ -28,8 +29,9 @@ const App: React.FC = ()  => {
                     <Route path="/case/3" element={<CaseThree/>}/>
                     <Route path="/case/4" element={<CaseFour/>}/>
                     <Route path="/case/5" element={<CaseFive/>}/>
-                    <Route path="/case/6" element={<CaseSix/>}/>
                     <Route path="/case/desktop-1" element={<CaseDesktop/>}/>
+                    <Route path="/reference/hotel-mweb" element={<CaseSix/>}/>
+                    <Route path="/reference/carhire-mweb" element={<CaseCarHire />}/>
                 </Routes>
             </HashRouter>
         </React.StrictMode>

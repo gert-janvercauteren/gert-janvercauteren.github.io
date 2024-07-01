@@ -14,17 +14,21 @@ interface Props {
     price: string
 }
 
-function CarCard({title, similarTitle, partner, dealCount, price}: Props) {
+function CarCard({title, similarTitle, partner, dealCount, price, option}: Props) {
     const partnerA11yText = `Supplied by, ${partner}`
     const priceA11yText = `${dealCount} deals from ${price}`
+    const a11yTitle = `${title}, ${priceA11yText}, option ${option}`
 
     return (
         <BpkCard atomic={false} padded={false} className={'CarCard'}>
             <div className={'Content'}>
                 <div className={'TitleRow'}>
                     <div>
-                        <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h3'}>
-                            {title}
+                        <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
+                            <span aria-hidden>{title}</span>
+                            <a href={`https://example.com/${title}`} className={'CardLink'}>
+                                <span className={'visually-hidden'}>{a11yTitle}</span>
+                            </a>
                         </BpkText>
                         <BpkText textStyle={TEXT_STYLES.caption} tagName={'p'}>
                             {similarTitle}
@@ -55,22 +59,15 @@ function CarCard({title, similarTitle, partner, dealCount, price}: Props) {
                         Some deals with free cancellation
                     </BpkText>
 
-                    <div className={'PriceInfo'}>
-                        <span className={'visually-hidden'}>{priceA11yText}</span>
-                        <BpkText textStyle={TEXT_STYLES.base} tagName={'p'} aria-hidden>
+                    <div className={'PriceInfo'} aria-hidden>
+                        <BpkText textStyle={TEXT_STYLES.base} tagName={'p'}>
                             {dealCount} deals from
                         </BpkText>
-                        <BpkText textStyle={TEXT_STYLES.heading4} tagName={'p'} aria-hidden>
+                        <BpkText textStyle={TEXT_STYLES.heading4} tagName={'p'}>
                             {price}
                         </BpkText>
                     </div>
                 </div>
-            </div>
-            {/*Link to view details is placed at the end and css is used to make the whole card clickable */}
-            <div className={'CardLink'}>
-                <a href="https://example.com" className={'CardRound'}>
-                    <span className={'visually-hidden'}>View deals, {title}</span>
-                </a>
             </div>
         </BpkCard>
     )

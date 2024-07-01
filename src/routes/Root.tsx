@@ -9,7 +9,8 @@ function Root() {
                     <li><a href={`/#/case/prod`}>Original</a></li>
                     <li>Reference Implementation</li>
                     <ul>
-                        <li><a href={`/#/case/6`}>mWeb Hotel</a></li>
+                        <li><a href={`/#/reference/hotel-mweb`}>Hotel mWeb</a></li>
+                        <li><a href={`/#/reference/carhire-mweb`}>Car Hire mWeb</a></li>
                     </ul>
                     <li>mWeb</li>
                     <ul>

@@ -29,7 +29,7 @@ function CaseTwo() {
                      cityCenterDistance={'9.87km'}></HotelCardV2>
     </>
     return (
-        <List children={cards}></List>
+        <List title={"Hotels in Barcelona"} count={3} children={cards}></List>
     )
 }
 

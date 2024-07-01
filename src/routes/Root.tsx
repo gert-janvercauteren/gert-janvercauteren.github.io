@@ -7,7 +7,10 @@ function Root() {
             <nav>
                 <ul>
                     <li><a href={`/#/case/prod`}>Original</a></li>
-
+                    <li>Reference Implementation</li>
+                    <ul>
+                        <li><a href={`/#/case/6`}>mWeb Hotel</a></li>
+                    </ul>
                     <li>mWeb</li>
                     <ul>
                         <li><a href={`/#/case/1`}>mWeb case 1</a></li>
@@ -15,7 +18,6 @@ function Root() {
                         <li><a href={`/#/case/3`}>mWeb case 3</a></li>
                         <li><a href={`/#/case/4`}>mWeb case 4</a></li>
                         <li><a href={`/#/case/5`}>mWeb case 5</a></li>
-                        <li><a href={`/#/case/6`}>mWeb case 6</a></li>
                     </ul>
 
                     <li>Desktop</li>

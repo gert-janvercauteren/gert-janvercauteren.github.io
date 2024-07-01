@@ -1,4 +1,3 @@
-import BpkText, {TEXT_STYLES} from '@skyscanner/backpack-web/bpk-component-text';
 import React from "react";
 import HotelCardV3 from "../components/HotelCardV3/HotelCardV3";
 import List from "../components/List/List";

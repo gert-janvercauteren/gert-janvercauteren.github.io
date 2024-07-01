@@ -1,5 +1,4 @@
 import React from "react";
-import HotelCard from "../components/HotelCard/HotelCard";
 import List from "../components/List/List";
 import HotelCardV4 from "../components/HotelCardV4/HotelCardV4";
 

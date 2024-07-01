@@ -1,8 +1,5 @@
-import BpkText, {TEXT_STYLES} from '@skyscanner/backpack-web/bpk-component-text';
 import React from "react";
 import HotelCard from "../components/HotelCard/HotelCard";
-import CarCard from "../components/CarCard/CarCard";
-import FlightCard from "../components/FlightCard/FlightCard";
 import List from "../components/List/List";
 
 function CaseOne() {

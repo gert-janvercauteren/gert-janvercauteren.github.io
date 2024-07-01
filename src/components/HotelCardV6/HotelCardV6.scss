@@ -18,6 +18,35 @@ button {
 
   &__CardContent {
     padding: bpk-spacing-base();
+
+    &__Headline {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__PriceContainer {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__CardLink {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: $bpk-border-radius-md;
+
+      a::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: $bpk-border-radius-md;
+      }
+    }
   }
 
   &__SaveButton {
@@ -34,32 +63,5 @@ button {
   }
 }
 
-.Headline {
-  display: flex;
-  justify-content: space-between;
-}
 
-.PriceContainer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.CardLink {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: .75rem;
-
-  a::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    border-radius: .75rem;
-  }
-}
 

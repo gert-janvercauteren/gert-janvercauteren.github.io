@@ -1,15 +1,15 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
 import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
-import {SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
+import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
 import {useState} from "react";
-import BpkSaveButtonV2 from "../BPKSaveButtonV2/BPKSaveButtonV2";
 import BpkRating from "@skyscanner/backpack-web/bpk-component-rating"
 import ratingLogo from "../../assets/rating.svg"
 
 import STYLES from "./HotelCardV6.scss";
-import { cssModules } from '@skyscanner/backpack-web/bpk-react-utils';
+import {cssModules} from '@skyscanner/backpack-web/bpk-react-utils';
+
 const getClassName = cssModules(STYLES);
 
 interface Props {
@@ -39,9 +39,9 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
             </div>
             <div className={getClassName('HotelCard__CardContent')}>
                 {/* Base hotel name */}
-                <div className={'Headline'}>
+                <div className={getClassName('HotelCard__CardContent__Headline')}>
                     <BpkText textStyle={TEXT_STYLES.heading5} tagName={'h2'}>
-                        <a href={`https://example.com/${title}`} className={'CardRound CardLink'}>
+                        <a href={`https://example.com/${title}`} className={getClassName('HotelCard__CardContent__CardLink')}>
                             <span className={'visually-hidden'}>{a11yTitle}</span>
                         </a>
                         <span aria-hidden>{title}</span>
@@ -64,11 +64,11 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
                         subtitle={`${reviews} reviews`}
                         value={rating}
                         showScale={false}
-                    />
+                        ratingScale={"zeroToFive"}/>
                 </BpkText>
 
                 {/* Price */}
-                <div className={'PriceContainer'}>
+                <div className={getClassName('HotelCard__CardContent__PriceContainer')}>
                     <BpkText textStyle={TEXT_STYLES.heading4} aria-hidden>
                         {price} night
                     </BpkText>
@@ -76,7 +76,7 @@ function HotelCardV6({title, price, stars, rating, reviews, option, cityCenterDi
 
                 {/* Positioned absolute in the top right corner */}
                 <div className={getClassName('HotelCard__SaveButton')}>
-                    <BpkSaveButtonV2
+                    <BpkSaveButton
                         checked={hotelSaved}
                         accessibilityLabel={`Save ${title}`}
                         onCheckedChange={() => {

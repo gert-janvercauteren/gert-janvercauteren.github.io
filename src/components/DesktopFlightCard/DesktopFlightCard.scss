@@ -1,10 +1,32 @@
 @import '~@skyscanner/bpk-foundations-web/tokens/base.default.scss';
 
+.FlightCard {
+  &__CardLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: $bpk-border-radius-md;
+
+    a::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-radius: $bpk-border-radius-md;
+    }
+  }
+}
+
 .FlightLegContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  position: relative;
 }
 
 .FlightLeg {
@@ -23,12 +45,14 @@
     display: flex;
     flex-direction: column;
     text-align: end;
+    z-index: 10;
   }
 
   &__Inbound {
     display: flex;
     flex-direction: column;
     text-align: start;
+    z-index: 10;
   }
 
   &__Duration {

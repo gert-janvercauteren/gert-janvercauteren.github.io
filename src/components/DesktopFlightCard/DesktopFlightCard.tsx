@@ -82,7 +82,7 @@ function DesktopFlightCard({title, price, stars, rating, reviews, option, cityCe
                             id="my-tooltip"
                             target={targetOutboundOutbound}
                         >
-                            Barcelona
+                            Barcelona Airport
                         </BpkTooltip>
                     </div>
                 </div>

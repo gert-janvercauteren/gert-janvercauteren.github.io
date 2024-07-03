@@ -1,0 +1,43 @@
+@import '~@skyscanner/bpk-foundations-web/tokens/base.default.scss';
+
+.FlightLegContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.FlightLeg {
+  display: grid;
+  gap: bpk-spacing-base();
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: bpk-spacing-base();
+
+  &__AirlineLogo {
+    width: 100%;
+    background-color: purple;
+    border-radius: $bpk-border-radius-md;
+  }
+
+  &__Outbound {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  &__Inbound {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  &__Duration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.FullWidth {
+  width: 100%;
+}

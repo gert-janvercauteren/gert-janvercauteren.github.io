@@ -24,7 +24,7 @@ function FlightCard() {
                     <BpkText textStyle={TEXT_STYLES.label1} tagName={'p'}>10:10</BpkText>
                     <BpkText textStyle={TEXT_STYLES.base} tagName={'p'}>
                         <span aria-hidden>LHR</span>
-                        <span className={'visually-hidden'}>London Heathrow Airport</span>
+                        <span className={'visually-hidden'}>London Heathrow Airport.</span>
                     </BpkText>
                 </div>
                 <div>

@@ -2,6 +2,7 @@
   "name": "accessible-cards",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://gert-jan.dev",
   "dependencies": {
     "@skyscanner/backpack-web": "^34.9.0",
     "localforage": "^1.10.0",

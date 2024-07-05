@@ -1,10 +1,8 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
 import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
-import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
 import './HotelCardProduction.scss'
-import {useState} from "react";
 
 interface Props {
     option: number
@@ -20,13 +18,8 @@ function HotelCardProduction({title, price, stars, rating, reviews, option, city
 
     const a11yTitle = `${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
-    const a11yPrice = `${price} per night`
 
     const cityCenterDistanceStr = `${cityCenterDistance} from city center`
-
-    const [hotelSaved, setHotelSaved] = useState(false)
-    const a11ySave = `Save, ${title}`
-    const a11yRemoveSaved = `Delete saved, ${title}`
 
     return (
         <BpkCard href={`https://example.com/${title}`} padded={false} className={"HotelCard"}>

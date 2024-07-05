@@ -20,7 +20,6 @@ function HotelCardV2({title, price, stars, rating, reviews, option, cityCenterDi
 
     const a11yTitle = `Option ${option}, ${title}, ${price} per night`
     const a11yRating = `Rated ${rating} of 5 on TripAdvisor. Based on ${reviews} reviews.`
-    const a11yPrice = `${price} per night`
 
     const cityCenterDistanceStr = `${cityCenterDistance} from city center`
 

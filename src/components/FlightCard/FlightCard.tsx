@@ -1,11 +1,9 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
-import BpkStarRating from "@skyscanner/backpack-web/bpk-component-star-rating";
 import {BpkSaveButton, SIZE_TYPES, STYLE_TYPES} from "@skyscanner/backpack-web/bpk-component-card-button";
 import BpkCard from "@skyscanner/backpack-web/bpk-component-card";
 import React from "react";
 import './FlightCard.scss'
 import {useState} from "react";
-import {BpkButtonV2} from "@skyscanner/backpack-web/bpk-component-button";
 
 function FlightCard() {
 

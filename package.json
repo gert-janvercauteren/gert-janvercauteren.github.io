@@ -20,6 +20,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build --cname gert-jan.dev",
+    "lint": "eslint --fix --ext .ts,.tsx .",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

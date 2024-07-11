@@ -1,0 +1,33 @@
+@import '~@skyscanner/backpack-web/bpk-mixins/index.scss';
+
+.SearchControl {
+  background-color: $bpk-surface-contrast-day;
+  padding: bpk-spacing-base();
+
+  &__Container {
+    display: flex;
+    position: relative;
+  }
+
+  &__SearchButton {
+    position: absolute;
+    left: bpk-spacing-md();
+    top: bpk-spacing-md();
+  }
+
+  &__SearchSummary {
+    all: unset;
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $bpk-color-white;
+    display: block;
+    text-align: center;
+    border-radius: $bpk-border-radius-md;
+  }
+
+  &__SearchSummary:focus-visible {
+    outline: 2px solid $bpk-core-accent-day;
+  }
+}

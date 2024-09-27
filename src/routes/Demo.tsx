@@ -5,7 +5,6 @@ import BpkLink from '@skyscanner/backpack-web/bpk-component-link';
 import BpkFieldset from '@skyscanner/backpack-web/bpk-component-fieldset';
 import BpkRadio from '@skyscanner/backpack-web/bpk-component-radio';
 import BpkSelect from '@skyscanner/backpack-web/bpk-component-select';
-import { Component } from 'react';
 import BpkDialog from '@skyscanner/backpack-web/bpk-component-dialog';
 
 import {ChangeEvent, useState} from "react";

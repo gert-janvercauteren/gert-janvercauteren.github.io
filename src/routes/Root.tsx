@@ -25,6 +25,11 @@ function Root() {
                     <ul>
                         <li><a href={`/#/case/desktop-1`}>Desktop case 1</a></li>
                     </ul>
+
+                    <li>Demo</li>
+                    <ul>
+                        <li><a href={`/#/demo/september`}>September 2024 demo</a></li>
+                    </ul>
                 </ul>
             </nav>
         </div>

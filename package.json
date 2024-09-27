@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://gert-jan.dev",
   "dependencies": {
-    "@skyscanner/backpack-web": "^34.9.0",
+    "@skyscanner/backpack-web": "^35.2.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^17.0.2",

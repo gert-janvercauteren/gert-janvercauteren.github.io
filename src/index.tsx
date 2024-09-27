@@ -17,6 +17,8 @@ import CaseSix from "./routes/CaseSix";
 import CaseDesktop from "./routes/CaseDesktop";
 import CaseCarHire from "./routes/CaseCarHire";
 import CaseLab from "./routes/CaseLab";
+import Demo from "./routes/Demo";
+import '@skyscanner/backpack-web/bpk-stylesheets';
 
 const App: React.FC = ()  => {
     return (
@@ -34,6 +36,7 @@ const App: React.FC = ()  => {
                     <Route path="/reference/hotel-mweb" element={<CaseSix/>}/>
                     <Route path="/reference/carhire-mweb" element={<CaseCarHire />}/>
                     <Route path="/lab" element={<CaseLab />}/>
+                    <Route path="/demo/september" element={<Demo />}/>
                 </Routes>
             </HashRouter>
         </React.StrictMode>

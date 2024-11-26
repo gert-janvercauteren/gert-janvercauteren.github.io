@@ -10,7 +10,7 @@ import BpkSmallDotIcon from "@skyscanner/backpack-web/bpk-component-icon/sm/dot"
 import {withButtonAlignment, withRtlSupport} from '@skyscanner/backpack-web/bpk-component-icon';
 import ChevronDownIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/chevron-down';
 import ChevronUpIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/chevron-up';
-import {BpkButtonV2, BUTTON_TYPES, SIZE_TYPES} from '@skyscanner/backpack-web/bpk-component-button';
+import {BpkButtonV2, BUTTON_TYPES} from '@skyscanner/backpack-web/bpk-component-button';
 
 const AlignedChevronDownIcon = withButtonAlignment(withRtlSupport(ChevronDownIcon));
 const AlignedChevronUpIcon = withButtonAlignment(withRtlSupport(ChevronUpIcon));

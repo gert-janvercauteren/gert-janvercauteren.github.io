@@ -59,6 +59,24 @@ h2 {
   margin-bottom: 0.5rem!important;
 }
 
+.icon-grid {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 /*form {*/
 /*  display: flex;*/
 /*  flex-direction: column;*/

@@ -20,6 +20,7 @@ import CaseLab from "./routes/CaseLab";
 import Demo from "./routes/Demo";
 import '@skyscanner/backpack-web/bpk-stylesheets';
 import FormDemo from "./routes/FormDemo";
+import ExpandButtonDemo from "./routes/ExpandButtonDemo";
 
 const App: React.FC = ()  => {
     return (
@@ -39,6 +40,7 @@ const App: React.FC = ()  => {
                     <Route path="/lab" element={<CaseLab />}/>
                     <Route path="/demo/september" element={<Demo />}/>
                     <Route path="/demo/form-demo" element={<FormDemo />}/>
+                    <Route path="/demo/button-demo" element={<ExpandButtonDemo />}/>
                 </Routes>
             </HashRouter>
         </React.StrictMode>

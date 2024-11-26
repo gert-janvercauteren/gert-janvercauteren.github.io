@@ -1,4 +1,6 @@
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
+import {BpkSpinner, SPINNER_TYPES} from "@skyscanner/backpack-web/bpk-component-spinner";
+import BpkSmallFlightIcon from '@skyscanner/backpack-web/bpk-component-icon/sm/flight';
 
 function Root() {
     return (
@@ -6,6 +8,8 @@ function Root() {
             <BpkText textStyle={TEXT_STYLES.heading1} tagName={'h1'}>Test cases</BpkText>
             <nav>
                 <ul>
+                    <BpkSpinner type={SPINNER_TYPES.primary}/>
+                    <BpkSmallFlightIcon />
                     <li><a href={`/#/case/prod`}>Original</a></li>
                     <li>Reference Implementation</li>
                     <ul>

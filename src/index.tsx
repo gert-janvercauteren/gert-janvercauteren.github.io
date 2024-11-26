@@ -19,6 +19,7 @@ import CaseCarHire from "./routes/CaseCarHire";
 import CaseLab from "./routes/CaseLab";
 import Demo from "./routes/Demo";
 import '@skyscanner/backpack-web/bpk-stylesheets';
+import FormDemo from "./routes/FormDemo";
 
 const App: React.FC = ()  => {
     return (
@@ -37,6 +38,7 @@ const App: React.FC = ()  => {
                     <Route path="/reference/carhire-mweb" element={<CaseCarHire />}/>
                     <Route path="/lab" element={<CaseLab />}/>
                     <Route path="/demo/september" element={<Demo />}/>
+                    <Route path="/demo/form-demo" element={<FormDemo />}/>
                 </Routes>
             </HashRouter>
         </React.StrictMode>

@@ -4,6 +4,7 @@ import React, {useRef} from "react";
 import './DesktopFlightCard.scss'
 import {BpkDividedCard} from "@skyscanner/backpack-web/bpk-component-card";
 import BpkTooltip from "@skyscanner/backpack-web/bpk-component-tooltip";
+import BpkAccessibilityGroup from "../BpkAccessibilityGroup/BpkAccessibilityGroup";
 
 interface Props {
     option: number
@@ -56,8 +57,8 @@ function DesktopFlightCard({title, price, stars, rating, reviews, option, cityCe
             </BpkText>
 
             {/* Outbound leg */}
-            <div aria-label={outboundA11y}>
-                <div className={"FlightLeg"} aria-hidden>
+            <BpkAccessibilityGroup label={outboundA11y}>
+                <div className={"FlightLeg"}>
                     <div className={"FlightLeg__AirlineLogo"}>
                         <span className={'visually-hidden'}>Swiss Airlines</span>
                     </div>
@@ -86,10 +87,10 @@ function DesktopFlightCard({title, price, stars, rating, reviews, option, cityCe
                         </BpkTooltip>
                     </div>
                 </div>
-            </div>
+            </BpkAccessibilityGroup>
 
-            <div aria-label={returnA11y}>
-                <div className={"FlightLeg"} aria-hidden>
+            <BpkAccessibilityGroup label={returnA11y}>
+                <div className={"FlightLeg"}>
                     <div className={"FlightLeg__AirlineLogo"}>
                         <span className={'visually-hidden'}>Swiss Airlines</span>
                     </div>
@@ -118,7 +119,7 @@ function DesktopFlightCard({title, price, stars, rating, reviews, option, cityCe
                         </BpkTooltip>
                     </div>
                 </div>
-            </div>
+            </BpkAccessibilityGroup>
         </div>
     )
 

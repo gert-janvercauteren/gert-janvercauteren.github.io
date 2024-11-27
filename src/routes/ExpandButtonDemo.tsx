@@ -38,6 +38,7 @@ function ExpandButtonDemo() {
             <BpkText textStyle={TEXT_STYLES.heading1} tagName='h1'>Button demo</BpkText>
 
             {/* Demo 1 */}
+            <BpkText textStyle={TEXT_STYLES.heading2} tagName='h2'>Demo 1</BpkText>
             <div>
                 <div className='icon-grid'>
                     <BpkSmallFoodIcon/>
@@ -63,17 +64,20 @@ function ExpandButtonDemo() {
             </div>
 
             {/* Demo 2 */}
+            <BpkText textStyle={TEXT_STYLES.heading2} tagName='h2'>Demo 2</BpkText>
             <div>
-                <BpkButtonV2
-                    type={BUTTON_TYPES.link}
-                    aria-expanded={expandedTwo}
-                    aria-controls='amenities-two'
-                    onClick={() => setExpandedTwo(!expandedTwo)}
-                >
-                    Amenities
-                    {expandedTwo && <AlignedChevronUpIcon/>}
-                    {!expandedTwo && <AlignedChevronDownIcon/>}
-                </BpkButtonV2>
+                <div>
+                    <BpkButtonV2
+                        type={BUTTON_TYPES.link}
+                        aria-expanded={expandedTwo}
+                        aria-controls='amenities-two'
+                        onClick={() => setExpandedTwo(!expandedTwo)}
+                    >
+                        Amenities
+                        {expandedTwo && <AlignedChevronUpIcon/>}
+                        {!expandedTwo && <AlignedChevronDownIcon/>}
+                    </BpkButtonV2>
+                </div>
                 <div id='amenities-two' hidden={!expandedTwo}>
                     {listContent}
                 </div>

@@ -19,6 +19,7 @@ function ExpandButtonDemo() {
 
     const [expanded, setExpanded] = useState(false);
     const [expandedTwo, setExpandedTwo] = useState(false);
+    const [expandedThree, setExpandedThree] = useState(false);
 
     const listContent = (
         <ul>
@@ -79,6 +80,27 @@ function ExpandButtonDemo() {
                     </BpkButtonV2>
                 </div>
                 <div id='amenities-two' hidden={!expandedTwo}>
+                    {listContent}
+                </div>
+            </div>
+
+            {/* Demo 3 */}
+            <BpkText textStyle={TEXT_STYLES.heading2} tagName='h2'>Demo 3</BpkText>
+            <div>
+                <div>
+                    <BpkButtonV2
+                        type={BUTTON_TYPES.link}
+                        aria-expanded={expandedThree}
+                        aria-controls='amenities-three'
+                        onClick={() => setExpandedThree(!expandedThree)}
+                    >
+                        {expandedThree && 'Hide amenities'}
+                        {!expandedThree && 'Show amenities'}
+                        {expandedThree && <AlignedChevronUpIcon/>}
+                        {!expandedThree && <AlignedChevronDownIcon/>}
+                    </BpkButtonV2>
+                </div>
+                <div id='amenities-three' hidden={!expandedThree}>
                     {listContent}
                 </div>
             </div>

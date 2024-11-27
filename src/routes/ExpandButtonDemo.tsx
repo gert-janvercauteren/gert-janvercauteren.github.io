@@ -18,40 +18,65 @@ const AlignedChevronUpIcon = withButtonAlignment(withRtlSupport(ChevronUpIcon));
 function ExpandButtonDemo() {
 
     const [expanded, setExpanded] = useState(false);
+    const [expandedTwo, setExpandedTwo] = useState(false);
+
+    const listContent = (
+        <ul>
+            <li><BpkSmallFoodIcon/> Meals provided</li>
+            <li><BpkSmallCafeIcon/> Nonalcoholic beverages available</li>
+            <li><BpkSmallMediaIcon/> Seatback on-demand video</li>
+            <li><BpkSmallDotIcon/> Power & USB outlets</li>
+            <li><BpkSmallWifiIcon/> Streaming Capable Wi-Fi (fee)</li>
+            <li><BpkSmallDotIcon/> 81 cm seat pitch</li>
+            <li><BpkSmallDotIcon/> 3-3-3 seat layout</li>
+            <li><BpkSmallDotIcon/> Airbus A350 (widebody)</li>
+        </ul>
+    )
 
     return (
         <div className='main-content'>
             <BpkText textStyle={TEXT_STYLES.heading1} tagName='h1'>Button demo</BpkText>
-            <div className='icon-grid'>
-                <BpkSmallFoodIcon/>
-                <BpkSmallCafeIcon/>
-                <BpkSmallMediaIcon/>
-                <BpkSmallPowerplugIcon/>
-                <BpkSmallWifiIcon/>
-                <BpkButtonV2
-                    iconOnly
-                    type={BUTTON_TYPES.link}
-                    aria-label='Amenities included: meals, non-alcoholic beverages, on-demand video, power & USB outlets, Wi-Fi'
-                    aria-expanded={expanded}
-                    aria-controls='amenities'
-                    onClick={() => setExpanded(!expanded)}
-                >
-                    {expanded && <AlignedChevronUpIcon/>}
-                    {!expanded && <AlignedChevronDownIcon/>}
-                    <span className="visually-hidden">Search</span>
-                </BpkButtonV2>
+
+            {/* Demo 1 */}
+            <div>
+                <div className='icon-grid'>
+                    <BpkSmallFoodIcon/>
+                    <BpkSmallCafeIcon/>
+                    <BpkSmallMediaIcon/>
+                    <BpkSmallPowerplugIcon/>
+                    <BpkSmallWifiIcon/>
+                    <BpkButtonV2
+                        iconOnly
+                        type={BUTTON_TYPES.link}
+                        aria-label='Amenities included: meals, non-alcoholic beverages, on-demand video, power & USB outlets, Wi-Fi'
+                        aria-expanded={expanded}
+                        aria-controls='amenities'
+                        onClick={() => setExpanded(!expanded)}
+                    >
+                        {expanded && <AlignedChevronUpIcon/>}
+                        {!expanded && <AlignedChevronDownIcon/>}
+                    </BpkButtonV2>
+                </div>
+                <div id='amenities' hidden={!expanded}>
+                    {listContent}
+                </div>
             </div>
-            <div id='amenities' hidden={!expanded}>
-                <ul>
-                    <li><BpkSmallFoodIcon/> Meals provided</li>
-                    <li><BpkSmallCafeIcon/> Nonalcoholic beverages available</li>
-                    <li><BpkSmallMediaIcon/> Seatback on-demand video</li>
-                    <li><BpkSmallDotIcon /> Power & USB outlets</li>
-                    <li><BpkSmallWifiIcon/> Streaming Capable Wi-Fi (fee)</li>
-                    <li><BpkSmallDotIcon /> 81 cm seat pitch</li>
-                    <li><BpkSmallDotIcon /> 3-3-3 seat layout</li>
-                    <li><BpkSmallDotIcon /> Airbus A350 (widebody)</li>
-                </ul>
+
+            {/* Demo 2 */}
+            <div>
+                <BpkButtonV2
+                    type={BUTTON_TYPES.link}
+                    aria-expanded={expandedTwo}
+                    aria-controls='amenities-two'
+                    onClick={() => setExpandedTwo(!expandedTwo)}
+                >
+                    Amenities
+                    {expandedTwo && <AlignedChevronUpIcon/>}
+                    {!expandedTwo && <AlignedChevronDownIcon/>}
+                </BpkButtonV2>
+                <div id='amenities-two' hidden={!expandedTwo}>
+                    {listContent}
+                </div>
             </div>
         </div>
     )

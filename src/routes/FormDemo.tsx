@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import BpkText, {TEXT_STYLES} from "@skyscanner/backpack-web/bpk-component-text";
 import BpkInput, { INPUT_TYPES, CLEAR_BUTTON_MODES } from '@skyscanner/backpack-web/bpk-component-input';
 import BpkLabel from '@skyscanner/backpack-web/bpk-component-label';
+import {BpkButtonV2} from "@skyscanner/backpack-web/bpk-component-button";
 
 
 function FormDemo() {
@@ -11,6 +12,8 @@ function FormDemo() {
 
     const [pickUpLocationInvisible, setPickUpLocationInvisible] = useState('');
     const [dropOffLocationInvisible, setDropOffLocationInvisible] = useState('');
+
+    const hasPickVal = false;
 
     return (
         <div className='main-content'>
@@ -73,6 +76,15 @@ function FormDemo() {
                 />
             </form>
 
+            <BpkText textStyle={TEXT_STYLES.heading2} tagName='h2'>Button :o</BpkText>
+
+            <BpkButtonV2 aria-label="Pick-up location, City airport or station">
+                City, airport or station
+            </BpkButtonV2>
+
+            <BpkButtonV2 aria-label="Pick-up location, Amsterdam">
+                Amsterdam
+            </BpkButtonV2>
         </div>
     )
 }

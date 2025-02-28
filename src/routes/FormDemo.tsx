@@ -13,8 +13,6 @@ function FormDemo() {
     const [pickUpLocationInvisible, setPickUpLocationInvisible] = useState('');
     const [dropOffLocationInvisible, setDropOffLocationInvisible] = useState('');
 
-    const hasPickVal = false;
-
     return (
         <div className='main-content'>
             <BpkText textStyle={TEXT_STYLES.heading1} tagName='h1'>Form demo</BpkText>

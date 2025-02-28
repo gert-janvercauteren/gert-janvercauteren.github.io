@@ -8,12 +8,14 @@ function ListDemo() {
         <div className='main-content'>
             <ul>
                 <li>
+                    {/* eslint-disable-next-line jsx-a11y/aria-role */}
                     <p className='list-item' role="text">
                         <BpkText textStyle={TEXT_STYLES.label2} tagName='span'>Free cancellation</BpkText>
                         <BpkText textStyle={TEXT_STYLES.footnote} tagName='span'>No</BpkText>
                     </p>
                 </li>
                 <li>
+                    {/* eslint-disable-next-line jsx-a11y/aria-role */}
                     <p className='list-item' role="text">
                         <BpkText textStyle={TEXT_STYLES.label2} tagName='span'>Mileage policy</BpkText>
                         <BpkText textStyle={TEXT_STYLES.footnote} tagName='span'>200 miles included</BpkText>
